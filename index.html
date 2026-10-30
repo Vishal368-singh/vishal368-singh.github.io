@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Vishal Singh | Backend-Focused Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Vishal Singh builds secure, reliable FastAPI and Node.js backends with PostgreSQL and MongoDB. Open to backend and full stack roles. Notice period 15 days or less."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://vishal368-singh.github.io/" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Vishal Singh | Backend-Focused Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="FastAPI, Node.js and PostgreSQL developer. Open to backend and full stack roles. Joins in 15 days or less."
+    />
+    <meta property="og:url" content="https://vishal368-singh.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vishal Singh",
+        "jobTitle": "Backend-Focused Full Stack Developer",
+        "worksFor": { "@type": "Organization", "name": "ML Infomap Pvt. Ltd." },
+        "url": "https://vishal368-singh.github.io/",
+        "sameAs": [
+          "https://github.com/Vishal368-singh",
+          "https://www.linkedin.com/in/vishalsingh61/"
+        ],
+        "email": "vishal.singh.dev61@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Delhi NCR",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --card: #fff;
+        --ink: #0f172a;
+        --mute: #475569;
+        --line: #e2e8f0;
+        --blue: #1d4ed8;
+        --blue2: #dbeafe;
+        --amber: #d97706;
+        --amber2: #fef3c7;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0b1220;
+          --card: #111a2e;
+          --ink: #e8eefc;
+          --mute: #9fb0cc;
+          --line: #1f2b46;
+          --blue: #7aa2ff;
+          --blue2: #16254a;
+          --amber: #fbbf24;
+          --amber2: #3a2c0a;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0b1220;
+        --card: #111a2e;
+        --ink: #e8eefc;
+        --mute: #9fb0cc;
+        --line: #1f2b46;
+        --blue: #7aa2ff;
+        --blue2: #16254a;
+        --amber: #fbbf24;
+        --amber2: #3a2c0a;
+        color-scheme: dark;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(72px + env(safe-area-inset-top, 0px));
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.65 system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+      a {
+        color: var(--blue);
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      #bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(90deg, var(--blue), var(--amber));
+        z-index: 60;
+      }
+      nav {
+        position: sticky;
+        top: env(safe-area-inset-top, 0px);
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav .wrap {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 56px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      nav b {
+        margin-right: auto;
+        white-space: nowrap;
+      }
+      nav a {
+        color: var(--mute);
+        text-decoration: none;
+        padding: 6px 11px;
+        border-radius: 99px;
+        font-size: 14px;
+        white-space: nowrap;
+        transition: 0.2s;
+      }
+      nav a:hover,
+      nav a.on {
+        background: var(--blue2);
+        color: var(--blue);
+      }
+      nav button {
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--ink);
+        border-radius: 99px;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        flex: none;
+      }
+      section {
+        padding: 72px 0;
+      }
+      h1 {
+        font-size: clamp(2rem, 5.4vw, 3.4rem);
+        line-height: 1.12;
+        margin: 0.3em 0;
+      }
+      h2 {
+        font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+        margin: 0 0 10px;
+      }
+      .eyebrow {
+        color: var(--amber);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .lead {
+        color: var(--mute);
+        font-size: 1.12rem;
+        max-width: 680px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        margin: 6px 10px 6px 0;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(29, 78, 216, 0.25);
+      }
+      .pri {
+        background: var(--blue);
+        color: #fff;
+      }
+      :root[data-theme="dark"] .pri {
+        color: #0b1220;
+      }
+      .sec {
+        border: 2px solid var(--amber);
+        color: var(--ink);
+      }
+      .facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0;
+      }
+      .facts span {
+        background: var(--amber2);
+        border-radius: 99px;
+        padding: 5px 13px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        margin-top: 26px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--blue);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+      }
+      .num {
+        font-size: 2.3rem;
+        font-weight: 800;
+        color: var(--blue);
+        line-height: 1;
+      }
+      .card h3 {
+        margin: 0.2em 0 0.3em;
+        font-size: 1.05rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--mute);
+        font-size: 15px;
+      }
+      .tag {
+        display: inline-block;
+        background: var(--blue2);
+        color: var(--blue);
+        border-radius: 8px;
+        padding: 2px 9px;
+        font-size: 13px;
+        margin: 3px 4px 3px 0;
+        font-weight: 600;
+      }
+      .tag.p {
+        background: var(--amber2);
+        color: var(--amber);
+      }
+      details {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        margin: 12px 0;
+        overflow: hidden;
+      }
+      summary {
+        cursor: pointer;
+        padding: 18px 22px;
+        font-weight: 700;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      summary::after {
+        content: "+";
+        color: var(--amber);
+        font-size: 1.4rem;
+        line-height: 1;
+        transition: transform 0.3s;
+      }
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      details > div {
+        padding: 0 22px 20px;
+        display: grid;
+        gap: 10px;
+        animation: dn 0.35s ease;
+      }
+      details b {
+        color: var(--blue);
+      }
+      @keyframes dn {
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .steps {
+        counter-reset: s;
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 0;
+        list-style: none;
+        margin-top: 24px;
+      }
+      .steps li {
+        counter-increment: s;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px 20px 20px 62px;
+        position: relative;
+      }
+      .steps li::before {
+        content: counter(s);
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--amber);
+        color: #111;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+      }
+      .steps b {
+        display: block;
+      }
+      .steps span {
+        color: var(--mute);
+        font-size: 15px;
+      }
+      .cta {
+        text-align: center;
+        background: linear-gradient(135deg, var(--blue2), var(--amber2));
+        border-radius: 24px;
+        padding: 48px 20px;
+      }
+      .cta .btn {
+        margin: 6px;
+      }
+      footer {
+        text-align: center;
+        color: var(--mute);
+        padding: 30px 0 40px;
+        font-size: 14px;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .grid .rv:nth-child(2) {
+        transition-delay: 0.08s;
+      }
+      .grid .rv:nth-child(3) {
+        transition-delay: 0.16s;
+      }
+      .grid .rv:nth-child(4) {
+        transition-delay: 0.24s;
+      }
+      .hero-in > * {
+        animation: up 0.8s both;
+      }
+      .hero-in > *:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .hero-in > *:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .hero-in > *:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .hero-in > *:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      @keyframes up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .seg {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        margin: 6px 0 8px;
+      }
+      .seg span {
+        color: var(--mute);
+        font-size: 14px;
+      }
+      .seg button {
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--ink);
+        border-radius: 99px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font:
+          600 15px system-ui,
+          sans-serif;
+        transition: 0.2s;
+      }
+      .seg button:hover {
+        border-color: var(--blue);
+      }
+      .seg button.on {
+        background: var(--blue);
+        color: var(--bg);
+        border-color: var(--blue);
+      }
+      #rolemsg {
+        min-height: 1.6em;
+        margin: 4px 0 0;
+        font-size: 1rem;
+      }
+      .tag {
+        transition:
+          opacity 0.35s,
+          transform 0.35s;
+      }
+      .tag.dim {
+        opacity: 0.28;
+      }
+      details {
+        transition: opacity 0.35s;
+      }
+      details.dim {
+        opacity: 0.5;
+      }
+      a.tag {
+        text-decoration: none;
+      }
+      a.tag:hover {
+        transform: translateY(-2px);
+      }
+      .term {
+        background: #0b1220;
+        color: #d6e2ff;
+        border-radius: 16px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        margin-top: 22px;
+      }
+      .tr {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .term select {
+        background: #16213a;
+        color: #d6e2ff;
+        border: 1px solid #2a3a60;
+        border-radius: 10px;
+        padding: 11px;
+        flex: 1;
+        min-width: 0;
+        font: inherit;
+      }
+      .term pre {
+        margin: 14px 0 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font:
+          14px/1.6 ui-monospace,
+          Menlo,
+          Consolas,
+          monospace;
+        min-height: 170px;
+      }
+      .ok {
+        color: #4ade80;
+      }
+      .nt {
+        color: #fbbf24;
+      }
+      .term button:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+      .tl {
+        position: relative;
+        margin-top: 24px;
+        padding-left: 28px;
+        border-left: 2px solid var(--line);
+      }
+      .tl > .card {
+        margin-bottom: 18px;
+        position: relative;
+      }
+      .tl > .card::before {
+        content: "";
+        position: absolute;
+        left: -37px;
+        top: 26px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--amber);
+        border: 3px solid var(--bg);
+      }
+      .tl h3 {
+        font-size: 1.2rem;
+      }
+      .tl .when {
+        color: var(--amber);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .tl ul {
+        margin: 12px 0 0;
+        padding-left: 20px;
+        color: var(--mute);
+      }
+      .tl li {
+        margin: 6px 0;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .hero {
+        padding-top: 44px;
+        padding-bottom: 20px;
+      }
+      .hero h1 {
+        margin: 0.25em 0;
+      }
+      .open {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--amber2);
+        border-radius: 99px;
+        padding: 6px 14px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .open i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #16a34a;
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6);
+        animation: pl 1.8s infinite;
+      }
+      @keyframes pl {
+        70% {
+          box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+        }
+      }
+      .snap {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 10px;
+        margin: 20px 0 14px;
+      }
+      .snap > div {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 14px;
+        min-width: 0;
+      }
+      .snap small {
+        display: block;
+        color: var(--mute);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .snap b {
+        display: block;
+        font-size: 15px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+      }
+      .dock {
+        display: none;
+      }
+      img,
+      pre,
+      select {
+        max-width: 100%;
+      }
+      .tag {
+        overflow-wrap: anywhere;
+      }
+      .btn,
+      .seg button,
+      summary {
+        min-height: 44px;
+      }
+      @media (min-width: 1280px) {
+        .wrap {
+          max-width: 1160px;
+        }
+      }
+      @media (max-width: 760px) {
+        body {
+          padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+        }
+        .wrap {
+          padding: 0 16px;
+        }
+        section {
+          padding: 42px 0;
+        }
+        .hero {
+          padding-top: 28px;
+        }
+        .btn {
+          display: block;
+          text-align: center;
+          margin: 8px 0;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .snap {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .snap > div {
+          padding: 10px 12px;
+        }
+        .card {
+          padding: 16px;
+        }
+        .num {
+          font-size: 1.9rem;
+        }
+        .tl {
+          padding-left: 20px;
+        }
+        .tl > .card::before {
+          left: -29px;
+        }
+        .tr {
+          flex-wrap: wrap;
+        }
+        .tr .btn {
+          width: 100%;
+        }
+        .term pre {
+          font-size: 13px;
+        }
+        summary {
+          padding: 14px 16px;
+        }
+        details > div {
+          padding: 0 16px 16px;
+        }
+        .cta {
+          padding: 30px 16px;
+          border-radius: 18px;
+        }
+        nav b {
+          display: none;
+        }
+        .dock {
+          display: flex;
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          gap: 8px;
+          padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
+          background: var(--card);
+          border-top: 1px solid var(--line);
+          z-index: 55;
+        }
+        .dock a {
+          flex: 1;
+          text-align: center;
+          padding: 12px 6px;
+          border-radius: 12px;
+          font-weight: 700;
+          text-decoration: none;
+          min-height: 44px;
+          font-size: 15px;
+          background: var(--blue2);
+          color: var(--blue);
+        }
+        .dock a:first-child {
+          background: var(--blue);
+          color: var(--bg);
+        }
+      }
+      @media (max-width: 420px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .snap {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (hover: none) {
+        .card:hover {
+          transform: none;
+          box-shadow: none;
+          border-color: var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bar"></div>
+    <nav>
+      <div class="wrap">
+        <b>Vishal Singh</b> <a href="#top">Home</a
+        ><a href="#experience">Experience</a><a href="#work">Work</a
+        ><a href="#skills">Skills</a><a href="#demo">Demo</a
+        ><a href="#contact">Contact</a>
+        <button id="th" aria-label="Toggle theme">&#9680;</button>
+      </div>
+    </nav>
+
+    <header id="top">
+      <div class="wrap hero-in hero">
+        <span class="open"><i></i>Open to work, can join in 15 days</span>
+        <h1>Backend developer who ships secure, reliable APIs.</h1>
+        <p class="lead">
+          I am Vishal Singh. I build with FastAPI, Node.js and PostgreSQL, and I
+          can take a feature all the way to the React or Angular screen.
+        </p>
+        <div class="snap">
+          <div><small>Role</small><b>Backend / Full Stack Developer</b></div>
+          <div><small>Experience</small><b>1+ year at ML Infomap</b></div>
+          <div>
+            <small>Core stack</small><b>Python, FastAPI, Node.js, PostgreSQL</b>
+          </div>
+          <div>
+            <small>Location</small><b>Delhi NCR, open to relocate or remote</b>
+          </div>
+          <div>
+            <small>Live proof</small
+            ><b
+              ><a
+                href="https://vishal368-singh.github.io/PrabhaVi-AI/"
+                target="_blank"
+                rel="noopener"
+                >Try Prabhavi AI</a
+              ></b
+            >
+          </div>
+          <div>
+            <small>Education</small><b>B.Tech CS and Design, CGPA 8.28</b>
+          </div>
+        </div>
+        <div class="seg" role="group" aria-label="View my profile as">
+          <span>View me as:</span
+          ><button class="on" data-role="b">Backend</button
+          ><button data-role="f">Full Stack</button
+          ><button data-role="u">Frontend</button>
+        </div>
+        <p id="rolemsg" class="lead" aria-live="polite"></p>
+        <div>
+          <a
+            class="btn pri"
+            href="mailto:vishal.singh.dev61@gmail.com?subject=Opportunity%20for%20Vishal"
+            >Email Me</a
+          ><a class="btn sec" href="resume.pdf" download>Download Resume</a
+          ><a class="btn sec" href="#work">See My Work</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="proof">
+      <div class="wrap">
+        <div class="eyebrow">Track record</div>
+        <h2>Outcomes, not duties.</h2>
+        <div class="grid">
+          <div class="card rv">
+            <div class="num" data-n="5">0</div>
+            <h3>Projects delivered</h3>
+            <p>
+              Property survey, GIS module, task tracking, weather alerts, AI
+              utilities.
+            </p>
+          </div>
+          <div class="card rv">
+            <div class="num">All</div>
+            <h3>Linked tables kept consistent</h3>
+            <p>
+              Re-survey logic refreshes linked IDs across every related model in
+              one flow.
+            </p>
+          </div>
+          <div class="card rv">
+            <div class="num" data-n="2">0</div>
+            <h3>Backend stacks</h3>
+            <p>
+              FastAPI with Python and Express with Node.js, both with JWT and
+              role based access.
+            </p>
+          </div>
+          <div class="card rv">
+            <div class="num" data-n="15">0</div>
+            <h3>Days to join</h3>
+            <p>Notice period of 15 days or less.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="eyebrow">Work history</div>
+        <h2>Where I have built things.</h2>
+        <div class="tl">
+          <div class="card rv">
+            <div class="when">Jul 2025 to Present | Full time</div>
+            <h3>Software Developer, ML Infomap Pvt. Ltd.</h3>
+            <p>
+              Delhi NCR, India. Backend and full stack development on data heavy
+              GIS and survey platforms.
+            </p>
+            <ul>
+              <li>
+                Built and maintained RESTful APIs with FastAPI and Node.js
+                covering authentication, CRUD operations, and role based access
+                control.
+              </li>
+              <li>
+                Designed PostgreSQL schemas and data models for the Korba
+                Property Application backend.
+              </li>
+              <li>
+                Engineered re-survey logic that regenerates survey_id and
+                refreshes property_uid across all related tables, keeping
+                existing_property_id unchanged.
+              </li>
+              <li>
+                Developed full stack applications with React, Angular, Node.js,
+                and MongoDB, with responsive UI and frontend performance tuning.
+              </li>
+              <li>
+                Worked with backend, frontend, and GIS teams to deliver
+                features, integrate APIs, and resolve production issues.
+              </li>
+            </ul>
+            <p style="margin-top: 12px">
+              <span class="tag p">Property Survey System</span
+              ><span class="tag p">GIS Visualization Module</span
+              ><span class="tag p">Task Reporting System</span
+              ><span class="tag p">Weather Alerts for Indus Towers</span>
+            </p>
+          </div>
+          <div class="card rv">
+            <div class="when">2021 to 2025</div>
+            <h3>B.Tech, Computer Science and Design</h3>
+            <p>
+              RR Institute of Modern Technology, Lucknow. CGPA 8.28. Built
+              Prabhavi AI Web as an academic project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="eyebrow">Case studies</div>
+        <h2>How I solve it. Tap to open.</h2>
+        <details open>
+          <summary>Property Survey Management System</summary>
+          <div>
+            <p>
+              <b>Problem.</b> A re-survey had to refresh identifiers without
+              breaking links between parcel, property, and document records.
+            </p>
+            <p>
+              <b>Approach.</b> Regenerated survey_id, rebuilt the composite
+              property_uid, kept existing_property_id frozen, and wrote a
+              repoint helper that updates every mapped model before the section
+              upsert loop.
+            </p>
+            <p>
+              <b>Outcome.</b> Consistent identifiers across all related tables
+              after each re-survey.
+            </p>
+            <p>
+              <b>For you.</b> I protect data integrity in complex update flows.
+            </p>
+            <p>
+              <span class="tag">Python</span><span class="tag">FastAPI</span
+              ><span class="tag">PostgreSQL</span
+              ><a
+                class="tag p"
+                href="https://github.com/Vishal368-singh/Korba-Servey-Application-API"
+                target="_blank"
+                rel="noopener"
+                >Code on GitHub</a
+              >
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Daily Task Reporting and Tracking System</summary>
+          <div>
+            <p>
+              <b>Problem.</b> Missed or late task reports were hard to spot
+              across projects.
+            </p>
+            <p>
+              <b>Approach.</b> Built modules for submission, report tracking,
+              and project distribution, with automated actions on delayed or
+              missing entries.
+            </p>
+            <p>
+              <b>Outcome.</b> An internal system with automatic status tracking.
+            </p>
+            <p><b>For you.</b> I turn manual processes into reliable APIs.</p>
+            <p>
+              <span class="tag">REST APIs</span
+              ><span class="tag">Automation</span
+              ><a
+                class="tag p"
+                href="https://github.com/Vishal368-singh/task-reporting-system"
+                target="_blank"
+                rel="noopener"
+                >Code on GitHub</a
+              >
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Weather Intelligence and Alert System</summary>
+          <div>
+            <p>
+              <b>Problem.</b> Operations teams needed live weather views by
+              state and district.
+            </p>
+            <p>
+              <b>Approach.</b> Integrated live weather APIs and built 7 day and
+              24 hour forecast dashboards in Angular.
+            </p>
+            <p>
+              <b>Outcome.</b> Real time analytical reports at state and district
+              level.
+            </p>
+            <p><b>For you.</b> I connect external data to usable dashboards.</p>
+            <p>
+              <span class="tag">Angular</span><span class="tag">FastAPI</span
+              ><span class="tag">Redis</span
+              ><a
+                class="tag p"
+                href="https://github.com/Vishal368-singh/weather-monitor-dashboard"
+                target="_blank"
+                rel="noopener"
+                >Code on GitHub</a
+              >
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Prabhavi AI Web</summary>
+          <div>
+            <p>
+              <b>Problem.</b> Students needed several image tools in one place.
+            </p>
+            <p>
+              <b>Approach.</b> Integrated third party APIs for background
+              removal, enhancement, and compression behind one interface.
+            </p>
+            <p><b>Outcome.</b> A unified utility platform.</p>
+            <p><b>For you.</b> I ship full stack features end to end.</p>
+            <p>
+              <span class="tag">React</span><span class="tag">Node.js</span
+              ><span class="tag">MongoDB</span
+              ><span class="tag">OpenAI API</span
+              ><a
+                class="tag p"
+                href="https://vishal368-singh.github.io/PrabhaVi-AI/"
+                target="_blank"
+                rel="noopener"
+                >Live demo</a
+              ><a
+                class="tag p"
+                href="https://github.com/Vishal368-singh/PrabhaVi-AI"
+                target="_blank"
+                rel="noopener"
+                >Code on GitHub</a
+              >
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="eyebrow">Tech stack</div>
+        <h2>Tools I use. Primary ones are highlighted.</h2>
+        <div class="grid">
+          <div class="card rv">
+            <h3>Backend</h3>
+            <span class="tag p">Python</span><span class="tag p">FastAPI</span
+            ><span class="tag p">Node.js</span
+            ><span class="tag">Express.js</span
+            ><span class="tag">REST APIs</span><span class="tag">JWT</span
+            ><span class="tag">RBAC</span>
+          </div>
+          <div class="card rv">
+            <h3>Databases</h3>
+            <span class="tag p">PostgreSQL</span><span class="tag">MongoDB</span
+            ><span class="tag">MySQL</span><span class="tag">Redis</span>
+          </div>
+          <div class="card rv">
+            <h3>Frontend</h3>
+            <span class="tag">React</span><span class="tag">Angular</span
+            ><span class="tag">TypeScript</span><span class="tag">Redux</span
+            ><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card rv">
+            <h3>Tools</h3>
+            <span class="tag">Git</span><span class="tag">GitHub</span
+            ><span class="tag">Postman</span><span class="tag">AWS basics</span
+            ><span class="tag">Google Cloud basics</span>
+          </div>
+        </div>
+        <p class="lead" style="margin-top: 26px">
+          <b>Growing next:</b> Docker, CI/CD, and microservices design.
+        </p>
+      </div>
+    </section>
+
+    <section id="demo">
+      <div class="wrap">
+        <div class="eyebrow">Try it</div>
+        <h2>Send a request to the kind of API I build.</h2>
+        <p class="lead">
+          Simulated responses with sample data. Pick an endpoint and press Send.
+        </p>
+        <div class="term rv">
+          <div class="tr">
+            <select id="ep" aria-label="Endpoint">
+              <option value="0">GET /api/properties/{uid}</option>
+              <option value="1">POST /api/auth/login</option>
+              <option value="2">POST /api/surveys/{id}/resurvey</option>
+              <option value="3">GET /api/tasks/missing</option></select
+            ><button class="btn pri" id="send" style="margin: 0">Send</button>
+          </div>
+          <pre id="out" aria-live="polite">Press Send to see a response.</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">Your guide</div>
+        <h2>
+          I have debugged the bug where one wrong ID quietly breaks several
+          tables.
+        </h2>
+        <p class="lead">
+          That is why I design identifiers, schemas, and update flows before
+          writing endpoints. I work at ML Infomap on property survey, GIS, and
+          weather analytics systems. I hold a B.Tech in Computer Science and
+          Design (CGPA 8.28) and certifications in Google Cloud fundamentals,
+          AI, DSA with Java, and web development.
+        </p>
+      </div>
+    </section>
+
+    <section id="problem">
+      <div class="wrap">
+        <div class="eyebrow">What you are facing</div>
+        <h2>Backend problems cost more than they look.</h2>
+        <div class="grid">
+          <div class="card rv">
+            <h3>The business problem</h3>
+            <p>
+              Fragile APIs, inconsistent data across tables, and features
+              waiting on backend capacity.
+            </p>
+          </div>
+          <div class="card rv">
+            <h3>The worry</h3>
+            <p>
+              Hiring someone who needs heavy hand holding while a release date
+              is closing in.
+            </p>
+          </div>
+          <div class="card rv">
+            <h3>The principle</h3>
+            <p>
+              Data that people depend on deserves careful engineering from the
+              first commit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan">
+      <div class="wrap">
+        <div class="eyebrow">The plan</div>
+        <h2>My engineering playbook</h2>
+        <ol class="steps">
+          <li class="rv">
+            <b>Understand the data</b><span>Map entities and rules first.</span>
+          </li>
+          <li class="rv">
+            <b>Design the schema</b
+            ><span>Keys and relations that survive change.</span>
+          </li>
+          <li class="rv">
+            <b>Define the API contract</b
+            ><span>Clear routes and validation.</span>
+          </li>
+          <li class="rv">
+            <b>Secure it</b><span>JWT and role based access.</span>
+          </li>
+          <li class="rv">
+            <b>Build and test</b><span>Small, reviewable changes.</span>
+          </li>
+          <li class="rv">
+            <b>Observe and improve</b
+            ><span>Fix root causes, not symptoms.</span>
+          </li>
+        </ol>
+        <h2 style="margin-top: 44px">My first 90 days</h2>
+        <div class="grid">
+          <div class="card rv">
+            <div class="num" style="font-size: 1.4rem">Days 1 to 30</div>
+            <h3>Listen and learn</h3>
+            <p>Learn the codebase and data model, ship one small fix.</p>
+          </div>
+          <div class="card rv">
+            <div class="num" style="font-size: 1.4rem">Days 31 to 60</div>
+            <h3>Own a feature</h3>
+            <p>Deliver end to end with tests and documentation.</p>
+          </div>
+          <div class="card rv">
+            <div class="num" style="font-size: 1.4rem">Days 61 to 90</div>
+            <h3>Improve the system</h3>
+            <p>Propose and deliver one reliability or speed upgrade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="risk">
+      <div class="wrap">
+        <div class="eyebrow">What is at stake</div>
+        <h2>Without careful backend work</h2>
+        <p class="lead">
+          Teams risk inconsistent data, brittle integrations, and slow releases.
+          I design to prevent each of these.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta">
+          <h2>
+            If your team needs a backend developer who ships clean, secure APIs,
+            let's talk.
+          </h2>
+          <p class="lead" style="margin: 0 auto 18px">
+            Send a message and I will get back to you soon.
+          </p>
+          <a
+            class="btn pri"
+            href="mailto:vishal.singh.dev61@gmail.com?subject=Opportunity%20for%20Vishal"
+            >Email Me</a
+          >
+          <a
+            class="btn sec"
+            href="https://www.linkedin.com/in/vishalsingh61/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a
+            class="btn sec"
+            href="https://github.com/Vishal368-singh"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a class="btn sec" href="tel:+917985022320">Call +91 79850 22320</a>
+          <a class="btn sec" href="resume.pdf" download>Resume</a>
+        </div>
+      </div>
+    </section>
+    <footer>Vishal Singh, Delhi NCR, India</footer>
+
+    <div class="dock">
+      <a
+        href="mailto:vishal.singh.dev61@gmail.com?subject=Opportunity%20for%20Vishal"
+        >Email</a
+      ><a href="tel:+917985022320">Call</a
+      ><a href="resume.pdf" download>Resume</a>
+    </div>
+    <script>
+      (function () {
+        var d = document,
+          r = d.documentElement;
+        try {
+          var t = localStorage.getItem("th");
+          if (t) r.setAttribute("data-theme", t);
+        } catch (e) {}
+        d.getElementById("th").onclick = function () {
+          var dk =
+            r.getAttribute("data-theme") === "dark" ||
+            (!r.getAttribute("data-theme") &&
+              matchMedia("(prefers-color-scheme:dark)").matches);
+          var n = dk ? "light" : "dark";
+          r.setAttribute("data-theme", n);
+          try {
+            localStorage.setItem("th", n);
+          } catch (e) {}
+        };
+        var bar = d.getElementById("bar");
+        addEventListener(
+          "scroll",
+          function () {
+            var h = r.scrollHeight - innerHeight;
+            bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + "%";
+          },
+          { passive: true },
+        );
+        function count(el) {
+          var n = +el.dataset.n,
+            s = null;
+          (function f(ts) {
+            s = s || ts;
+            var p = Math.min((ts - s) / 1100, 1);
+            el.textContent = Math.round(n * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(f);
+          })(performance.now());
+        }
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                var c = e.target.querySelector("[data-n]");
+                if (c) count(c);
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        d.querySelectorAll(".rv").forEach(function (x) {
+          io.observe(x);
+        });
+        var links = [].slice.call(d.querySelectorAll("nav a")),
+          secs = links.map(function (a) {
+            return d.querySelector(a.getAttribute("href"));
+          });
+        var so = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                links.forEach(function (a) {
+                  a.classList.toggle(
+                    "on",
+                    a.getAttribute("href") === "#" + e.target.id,
+                  );
+                });
+              }
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px" },
+        );
+        secs.forEach(function (s) {
+          if (s) so.observe(s);
+        });
+        var M = {
+          b: "Backend first: APIs, schemas, authentication, and data integrity.",
+          f: "Full stack: I take a feature from the database to the screen.",
+          u: "Frontend: React and Angular interfaces, dashboards, and API integration.",
+        };
+        var S = {
+          b: [
+            "Python",
+            "FastAPI",
+            "Node.js",
+            "Express.js",
+            "REST APIs",
+            "JWT",
+            "RBAC",
+            "PostgreSQL",
+            "MongoDB",
+            "MySQL",
+            "Redis",
+            "Git",
+            "GitHub",
+            "Postman",
+            "AWS basics",
+            "Google Cloud basics",
+          ],
+          u: [
+            "React",
+            "Angular",
+            "TypeScript",
+            "Redux",
+            "Tailwind CSS",
+            "Git",
+            "GitHub",
+            "Postman",
+          ],
+          f: null,
+        };
+        var C = { b: [0, 1], f: [0, 1, 2, 3], u: [2, 3] };
+        var rb = [].slice.call(d.querySelectorAll(".seg button"));
+        function role(k) {
+          rb.forEach(function (b) {
+            b.classList.toggle("on", b.dataset.role === k);
+          });
+          d.getElementById("rolemsg").textContent = M[k];
+          d.querySelectorAll("#skills .tag").forEach(function (t) {
+            t.classList.toggle(
+              "dim",
+              !!S[k] && S[k].indexOf(t.textContent) < 0,
+            );
+          });
+          d.querySelectorAll("#work details").forEach(function (x, i) {
+            x.classList.toggle("dim", C[k].indexOf(i) < 0);
+          });
+        }
+        rb.forEach(function (b) {
+          b.onclick = function () {
+            role(b.dataset.role);
+          };
+        });
+        role("b");
+        var R = [
+          [
+            {
+              property_uid: "102-0457",
+              parcel_no: "102",
+              survey_id: "S-2",
+              existing_property_id: "0457",
+              status: "verified",
+            },
+            "Composite ID built from parcel_no and property_id. Role checked before the query.",
+          ],
+          [
+            {
+              access_token: "eyJ...signed",
+              token_type: "bearer",
+              role: "surveyor",
+              expires_in: 3600,
+            },
+            "Password verified, then a JWT is signed with a role claim for RBAC.",
+          ],
+          [
+            {
+              survey_id: "S-3",
+              property_uid: "refreshed",
+              related_tables: "repointed",
+              existing_property_id: "unchanged",
+            },
+            "Repoint step runs before the section upsert loop, so links never break.",
+          ],
+          [
+            {
+              missing_submissions: [
+                { user: "user_17", date: "2026-10-29", status: "flagged" },
+              ],
+            },
+            "Automated status tracking flags late or missing reports.",
+          ],
+        ];
+        var send = d.getElementById("send"),
+          out = d.getElementById("out"),
+          busy = false;
+        function esc(x) {
+          return x.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        }
+        send.onclick = function () {
+          if (busy) return;
+          var r = R[+d.getElementById("ep").value],
+            j = JSON.stringify(r[0], null, 2),
+            plain = "200 OK\n" + j,
+            html =
+              '<span class="ok">200 OK</span>\n' +
+              esc(j) +
+              '\n\n<span class="nt">// ' +
+              esc(r[1]) +
+              "</span>";
+          if (matchMedia("(prefers-reduced-motion:reduce)").matches) {
+            out.innerHTML = html;
+            return;
+          }
+          busy = true;
+          send.disabled = true;
+          send.textContent = "Sending...";
+          out.textContent = "";
+          var i = 0,
+            iv = setInterval(function () {
+              i += 4;
+              out.textContent = plain.slice(0, i);
+              if (i >= plain.length) {
+                clearInterval(iv);
+                out.innerHTML = html;
+                busy = false;
+                send.disabled = false;
+                send.textContent = "Send";
+              }
+            }, 18);
+        };
+      })();
+    </script>
+  </body>
+</html>
